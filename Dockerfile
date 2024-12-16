@@ -1,8 +1,11 @@
-FROM nginx:alpine
+FROM debian:latest
 
-# Instala los módulos de WebDAV (nginx-mod-http-dav-ext)
-RUN apk update && \
-    apk add --no-cache nginx-mod-http-dav-ext nginx-extras
+RUN apt-get update && \
+    apt-get install -y \
+    nginx \
+    nginx-extras \
+    libnginx-mod-http-dav-ext \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copiar configuración personalizada de nginx
 COPY nginx.conf /etc/nginx/nginx.conf
