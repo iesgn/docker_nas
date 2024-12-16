@@ -2,7 +2,7 @@ version: '3.9'
 services:
   webdav:
     image: iesgn/dit_nas
-    name: dit_nas
+    container_name: dit_nas
     ports:
       - "8002:80"
     volumes:
