@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  webdav:
+    image: nginx-webdav
+    ports:
+      - "8002:80"
+    volumes:
+      # Mapea los directorios locales como volúmenes en el contenedor
+      - ./htpasswd/htpasswd1:/etc/nginx/htpasswd1
+      - ./htpasswd/htpasswd2:/etc/nginx/htpasswd2
+      - ./documentroot1:/var/www/documentroot1
+      - ./documentroot2:/var/www/documentroot2
