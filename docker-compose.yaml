@@ -2,6 +2,7 @@ version: '3.9'
 services:
   webdav:
     image: nginx-webdav
+    name: dit_nas
     ports:
       - "8002:80"
     volumes:
