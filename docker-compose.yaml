@@ -9,5 +9,5 @@ services:
       # Mapea los directorios locales como volúmenes en el contenedor
       - ./htpasswd/htpasswd1:/etc/nginx/htpasswd1
       - ./htpasswd/htpasswd2:/etc/nginx/htpasswd2
-      - ./documentroot1:/var/www/documentroot1
-      - ./documentroot2:/var/www/documentroot2
+      - /srv/backup/NAS:/var/www/documentroot1
+      - /srv/backup/NAS:/var/www/documentroot2
