@@ -1,4 +1,8 @@
 FROM nginx:latest
+RUN apt-get update && \
+    apt-get install -y \
+    nginx-extras \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copiar configuración personalizada de nginx
 COPY nginx.conf /etc/nginx/nginx.conf
