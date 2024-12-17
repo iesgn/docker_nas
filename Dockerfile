@@ -1,6 +1,6 @@
 FROM debian:12
 
-RUN apt-get install ca-certificates && apt-get update && \
+RUN apt-get update && \
     apt-get install -y \
     nginx \
     nginx-extras \
