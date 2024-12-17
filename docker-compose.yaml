@@ -7,7 +7,7 @@ services:
       - "8002:80"
     volumes:
       # Mapea los directorios locales como volúmenes en el contenedor
-      - ./htpasswd/htpasswd1:/etc/nginx/htpasswd1
-      - ./htpasswd/htpasswd2:/etc/nginx/htpasswd2
+      - ./htpasswd/htpasswd1:/etc/apache2/htpasswd1
+      - ./htpasswd/htpasswd2:/etc/apache2/htpasswd2
       - /srv/backup/NAS:/var/www/documentroot1
       - /srv/backup/NAS:/var/www/documentroot2
