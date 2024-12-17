@@ -1,11 +1,6 @@
-FROM ubuntu:22.04
+FROM nginx:latest
 
-RUN apt-get update && \
-    apt-get install -y \
-    nginx \
-    nginx-extras \
-    libnginx-mod-http-dav-ext \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y nginx-extras
 
 # Copiar configuración personalizada de nginx
 COPY nginx.conf /etc/nginx/nginx.conf
